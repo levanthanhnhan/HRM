@@ -1,0 +1,38 @@
+<h2>Staff Management</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>
+        Name
+      </th>
+      <th>
+        Age
+      </th>
+      <th>
+        Address
+      </th>
+      <th>
+        Phone
+      </th>
+      <th>
+        Start Date
+      </th>
+      <th>
+        Action
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let staff of listStaff">
+      <td>{{staff.name}}</td>
+      <td>{{staff.age}}</td>
+      <td>{{staff.address}}</td>
+      <td>{{staff.phone}}</td>
+      <td>{{staff.startDate}}</td>
+      <td>
+        <a [routerLink]="['/staff/', staff.id]" class="btn btn-outline-success" routerLinkActive="router-link-active">Detail</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
